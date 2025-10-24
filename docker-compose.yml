@@ -1,0 +1,10 @@
+
+services:
+  web:
+    build: .
+    container_name: php-sqlite-app
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    restart: unless-stopped

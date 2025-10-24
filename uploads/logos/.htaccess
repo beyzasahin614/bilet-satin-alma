@@ -1,0 +1,10 @@
+# Sadece güvenli resim dosyalarına izin ver
+<FilesMatch "\.(php|phtml|phar|pl|cgi|asp|js|svg|webp|html|htm)$">
+    Deny from all
+</FilesMatch>
+
+AddType image/png .png
+AddType image/jpeg .jpg
+AddType image/jpeg .jpeg
+Options -ExecCGI
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8
